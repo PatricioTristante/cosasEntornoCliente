@@ -1,34 +1,24 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import Avatar from './tweet/avatar';
+import Autor from './tweet/contenido/autor';
+import Botones from './tweet/contenido/botones';
+import Tweet from './tweet/contenido/tweet';
 
-function App() {
-  const [count, setCount] = useState(0)
+const App = () => {
+  const tweet = 'Comenzamos con React en el módulo de Desarrollo web en entorno cliente. 2ª Evaluación';
+  const nombre = 'Víctor M. Garrido';
+  const nick   ='@vgc02g';
+  const cuando = '3h ago ';
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div className="tweet">
+          <Avatar></Avatar>
+            <div className="content">
+              <Autor nombre={nombre} nick={nick} cuando={cuando}></Autor>
+              <Tweet tweet={tweet}></Tweet>    
+              <Botones></Botones> 
+            </div>                
+    </div>
   )
 }
 
