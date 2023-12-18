@@ -1,12 +1,12 @@
 import { useContext } from "react"
 import NotasContext from "../contextos/notasContext"
 
-function Nota() {
+function Nota(props) {
 
     return (
        <li>
-           <p></p>
-           <p></p>
+           <p>{props.nota.contenido} <span className="peligro">{props.nota.importante === true ? "(Importante)" : ""}</span></p>
+           <p>{props.nota.fecha}</p>
        </li>
     )
   }

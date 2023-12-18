@@ -33,6 +33,10 @@
   }
 }
 
+.peligro{
+  color: red;
+}
+
 .card {
   padding: 2em;
 }
