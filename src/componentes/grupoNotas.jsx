@@ -21,9 +21,9 @@ function GrupoNotas() {
 
   return (
     <div>
-      <button onClick={filtrarImportantes}>{filtrar === true ? "Mostrar Todos" : "Mostrar Importantes"}</button>
+      <button onClick={filtrarImportantes}>{filtrar ? "Mostrar Todos" : "Mostrar Importantes"}</button>
       <ul>
-        {filtrar === true ? (notas.filter(esImportante)).map(muestraNota) : notas.map(muestraNota)}
+        {filtrar ? (notas.filter(esImportante)).map(muestraNota) : notas.map(muestraNota)}
       </ul>
     </div>
   )
