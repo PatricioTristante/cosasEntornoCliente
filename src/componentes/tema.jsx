@@ -6,8 +6,8 @@ function Tema(props) {
         return <Apartado key={apartado.id} parts={apartado}></Apartado>;
     }
 
-    function sumarEjercicios(total, numero) {
-        return total + numero.exercises;
+    function sumarEjercicios(total, apartado) {
+        return total + apartado.exercises;
     }
 
     return (
