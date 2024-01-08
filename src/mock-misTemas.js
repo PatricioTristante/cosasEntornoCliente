@@ -42,7 +42,7 @@ const misTemas = [
         }
         ]
     },
-    {
+    /* {
         id: 3,
         name: 'UT3. Javascript. REACT Basico',
         parts: [
@@ -62,7 +62,7 @@ const misTemas = [
             id: 3
         }
         ]
-    }
+    } */
 ]
 
 export default misTemas;
