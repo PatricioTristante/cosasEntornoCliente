@@ -1,6 +1,5 @@
 import './App.css'
 import GrupoNotas from './componentes/grupoNotas'
-import NotasContext from './contextos/notasContext'
 
 function App() {
 

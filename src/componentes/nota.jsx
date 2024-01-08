@@ -1,6 +1,3 @@
-import { useContext } from "react"
-import NotasContext from "../contextos/notasContext"
-
 function Nota(props) {
 
     return (
@@ -11,5 +8,5 @@ function Nota(props) {
     )
   }
   
-  export default Nota
+export default Nota
   
