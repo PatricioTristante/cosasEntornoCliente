@@ -2,33 +2,30 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import Fruta from './componentes/fruta'
+import frutas from './mock-frutas'
+import FrutaForm from './componentes/frutaForm'
 
 function App() {
-  const [count, setCount] = useState(0)
+  
+  const [listaFrutas, setListaFrutas] = useState(frutas);
+
+  function devolverFruta(fruta) {
+    return <Fruta key={listaFrutas.indexOf(fruta)} nombre={fruta}></Fruta>;
+  }
+
 
   return (
-    <>
+    <div>
       <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+        <ol>
+          {listaFrutas.map(devolverFruta)}
+        </ol>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+      <div>
+        <FrutaForm></FrutaForm>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    </div>
   )
 }
 
