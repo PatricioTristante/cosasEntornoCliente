@@ -1,9 +1,8 @@
 import Nota from "./nota"
-import notas from '../mock-notas'
-import { useState } from "react";
+import { useState } from "react"
 
 
-function GrupoNotas() {
+function GrupoNotas(props) {
 
   const [filtrar, setFiltrar] = useState(false);
 
@@ -23,7 +22,7 @@ function GrupoNotas() {
     <div>
       <button onClick={filtrarImportantes}>{filtrar ? "Mostrar Todos" : "Mostrar Importantes"}</button>
       <ul>
-        {filtrar ? (notas.filter(esImportante)).map(muestraNota) : notas.map(muestraNota)}
+        {filtrar ? (props.notas.filter(esImportante)).map(muestraNota) : props.notas.map(muestraNota)}
       </ul>
     </div>
   )
