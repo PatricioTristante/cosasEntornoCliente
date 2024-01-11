@@ -14,6 +14,23 @@ function App() {
     return <Fruta key={listaFrutas.indexOf(fruta)} nombre={fruta}></Fruta>;
   }
 
+  function añadirFruta(fruta) {
+
+      console.log("Fruta añadida: " + fruta);
+
+      setListaFrutas([...listaFrutas, fruta]);
+
+  }
+
+  function quitarFruta(fruta) {
+      const LISTATEMPORAL = listaFrutas.filter(frutas => fruta != frutas);
+
+      console.log("Fruta quitada: " + fruta);
+
+      setListaFrutas(LISTATEMPORAL);
+
+  }
+
 
   return (
     <div>
@@ -23,7 +40,7 @@ function App() {
         </ol>
       </div>
       <div>
-        <FrutaForm></FrutaForm>
+        <FrutaForm añadirFruta={añadirFruta} quitarFruta={quitarFruta}></FrutaForm>
       </div>
     </div>
   )
