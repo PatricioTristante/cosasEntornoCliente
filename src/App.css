@@ -1,6 +1,7 @@
 #root {
   text-align: center;
   width: 100%;
+  min-height: 840px;
 }
 
 .logo {
@@ -39,13 +40,47 @@
   color: #888;
 }
 
+.fondoNegro{
+  background-color: #000;
+}
+
+.fuenteBlanca{
+  color: #FFF;
+}
+
+header{
+  width: 100%;
+}
+
 header, .cuerpo-izquierda{
   text-align: center;
-  width: 100%;
-  background-color: #000;
-  color: #FFF;
 }
 
 .cuerpo-izquierda{
   width: 15%;
+  height: 700px;
 }
+
+.filtros{
+  height: 87%;
+}
+
+.genero{
+  height: 70%;
+}
+
+.listaGenero{
+  font-size: 119%;
+  width: 50%;
+  height: 90%;
+}
+
+.plataforma{
+  height: 21%;
+}
+
+.listaPlataforma{
+  width: 50%;
+  font-size: 119%;
+}
+

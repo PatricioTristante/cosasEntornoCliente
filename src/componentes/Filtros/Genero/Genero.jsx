@@ -1,11 +1,11 @@
-import genero from '../../mocks/mock-genero'
 
-function Genero() {
+
+function Genero(props) {
 
     
 
     return(
-        <p>Hola!</p>
+        <option value={props.genero}>{props.genero}</option>
     )
 }
 

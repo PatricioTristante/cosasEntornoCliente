@@ -3,7 +3,7 @@
 function Cabecera() {
   
   return (
-    <header>
+    <header className="fondoNegro fuenteBlanca">
         <h2>Free games</h2>
     </header>
   )
