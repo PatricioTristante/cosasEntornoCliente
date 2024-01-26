@@ -31,7 +31,7 @@ img {
     justify-self: start;
   }
 
-.ju-plataforma {padding: .2em 1em;
+.ju-categoria {padding: .2em 1em;
                 justify-self: left;
                 font-size: 13px;
                 text-align: left;}
@@ -41,4 +41,5 @@ img {
          margin-top: 0px;
         font-size: 15px;}
 
-.ju-destacado {font-weight: bold;}
+.ju-destacado {font-weight: bold;
+font-size: 15px;}

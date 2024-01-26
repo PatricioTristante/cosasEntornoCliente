@@ -3,12 +3,11 @@ import './App.css'
 
 import Cabecera from './componentes/cabecera/cabecera'
 import Titulo from './componentes/Filtros/Titulo/Titulo';
-import Genero from './componentes/Filtros/Genero/Genero';
 
 import ListaGenero from './componentes/Filtros/Genero/ListaGenero';
 import ListaPlataforma from './componentes/Filtros/Plataforma/ListaPlataforma';
-import useGame from './hooks/useGame';
 import ListaJuegos from './componentes/listaJuegos/ListaJuegos';
+import ScrollUp from './componentes/scrollUp/ScrollUp';
 
 function App() {
 
@@ -19,19 +18,16 @@ function App() {
   const [plataformaElegida, setPlataformaElegida] = useState('Todos');
 
   function alterarOrden(valor) {
-    setOrdenAscendente(ordenAscendente => valor);
+    setOrdenAscendente(valor);
   }
 
   function alterarGeneroElegido(valor) {
-    setGeneroElegido(generoElegido => valor);
+    setGeneroElegido(valor);
   }
 
   function alterarPlataformaElegida(valor) {
-    setPlataformaElegida(plataformaElegida => valor);
+    setPlataformaElegida(valor);
   }
-
-  console.log(generoElegido);
-  console.log(plataformaElegida);
 
   return (
     <div>
@@ -46,7 +42,9 @@ function App() {
           </div>
         </div>
         <div className='cuerpo-derecha'>
-          <ListaJuegos></ListaJuegos>
+          <span id='arriba'/>
+          <ListaJuegos ordenAscendente={ordenAscendente} generoElegido={generoElegido} plataformaElegida={plataformaElegida}></ListaJuegos>
+          <ScrollUp></ScrollUp>
         </div>
       </div>
     </div>

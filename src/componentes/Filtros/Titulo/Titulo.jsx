@@ -4,7 +4,7 @@ import React from "react";
 function Titulo(props) {
 
     function cambiarValor(evento) {
-        props.alterarOrden(evento.target.value);
+        props.alterarOrden(evento.target.value === 'true');
     }
 
     return(
