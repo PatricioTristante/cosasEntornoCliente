@@ -7,6 +7,8 @@ import Genero from './componentes/Filtros/Genero/Genero';
 
 import ListaGenero from './componentes/Filtros/Genero/ListaGenero';
 import ListaPlataforma from './componentes/Filtros/Plataforma/ListaPlataforma';
+import useGame from './hooks/useGame';
+import ListaJuegos from './componentes/listaJuegos/ListaJuegos';
 
 function App() {
 
@@ -34,12 +36,17 @@ function App() {
   return (
     <div>
       <Cabecera/>
-      <div className='cuerpo-izquierda fondoNegro fuenteBlanca'>
-        <Titulo ordenAscendente={ordenAscendente} alterarOrden={alterarOrden}></Titulo>
-        <div className='filtros'>
-          <h2>Filtros</h2>
-          <ListaGenero generoElegido={generoElegido} alterarGeneroElegido={alterarGeneroElegido}></ListaGenero>
-          <ListaPlataforma plataformaElegida={plataformaElegida} alterarPlataformaElegida={alterarPlataformaElegida}></ListaPlataforma>
+      <div className='cuerpo'>
+        <div className='cuerpo-izquierda fondoNegro fuenteBlanca'>
+          <Titulo ordenAscendente={ordenAscendente} alterarOrden={alterarOrden}></Titulo>
+          <div className='filtros'>
+            <h2>Filtros</h2>
+            <ListaGenero generoElegido={generoElegido} alterarGeneroElegido={alterarGeneroElegido}></ListaGenero>
+            <ListaPlataforma plataformaElegida={plataformaElegida} alterarPlataformaElegida={alterarPlataformaElegida}></ListaPlataforma>
+          </div>
+        </div>
+        <div className='cuerpo-derecha'>
+          <ListaJuegos></ListaJuegos>
         </div>
       </div>
     </div>

@@ -56,9 +56,20 @@ header, .cuerpo-izquierda{
   text-align: center;
 }
 
+.cuerpo{
+   display: flex;
+}
+
 .cuerpo-izquierda{
   width: 15%;
   height: 700px;
+}
+
+.cuerpo-derecha{
+  margin-left: 1%;
+  width: 84%;
+  max-height: 700px;
+  overflow-y: scroll;
 }
 
 .filtros{

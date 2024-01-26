@@ -1,28 +1,28 @@
 import { useEffect, useState } from 'react';
 import { getAllPosts } from '../servicios/posts/getAllPosts';
 
-function usePost() {
+function useGame() {
 
     const [buscando, setBuscando] = useState(false);
 
-    const [listaPost, setListaPost] = useState([]);
+    const [listaJuegos, setListaJuegos] = useState([]);
 
-    function obtenerPosts(){
+    function obtenerJuegos(){
 
         setBuscando(true);
     
         getAllPosts().then(posts => {
     
-            setListaPost(posts);
+            setListaJuegos(posts);
 
             setBuscando(false);
     
         });
     }
 
-    useEffect(obtenerPosts, []);
+    useEffect(obtenerJuegos, []);
 
-    return {buscando, listaPost};
+    return {buscando, listaJuegos};
 }
 
-export default usePost;
+export default useGame;
