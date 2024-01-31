@@ -1,3 +1,50 @@
 .logoNavbar {
-    width: 70%;
+    width: 55%;
+}
+
+.tituloHeader{
+    font-family: 'Shantell Sans', cursive !important;
+    font-weight: 700 !important;
+    font-size: 2.2em;
+}
+
+
+.bandera{
+    width: 40px;
+}
+
+.cambioIdioma{
+    border: none !important;
+}
+
+.colorBlanquecino{
+    color: #f1f1e6 !important;
+}
+
+.fondoColorBlanquecino{
+    background-color: #f1f1e6 !important;
+}
+
+.colorNaranja{
+    color: #ce7d2d !important;
+}
+
+.fondoColorNaranja{
+    background-color: #ce7d2d !important;
+}
+
+.colorAzulado{
+    color: #b8d3df !important;
+}
+
+.fondoColorAzulado{
+    background-color: #b8d3df !important;
+}
+
+.colorOscuro{
+    color: #364f59 !important;
+}
+
+.fondoColorOscuro{
+    background-color: #364f59 !important;
 }

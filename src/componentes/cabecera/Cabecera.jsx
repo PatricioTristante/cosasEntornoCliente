@@ -2,6 +2,7 @@ import React from 'react';
 import logoPagina from "../../assets/logo/mp-logoNaranja100.png";
 
 import banderaEspania from '../../assets/banderas/flag-for-flag-spain-svgrepo-com.svg'
+import banderaIngles from '../../assets/banderas/united-kingdom-uk-svgrepo-com.svg'
 
 import './Cabecera.css';
 
@@ -9,32 +10,27 @@ function Cabecera() {
     return (
         <div>
             <header>
-                <nav className="navbar navbar-expand-md bg-dark navbar-dark">
-                    <div className='col-4 col-md-2'>
-                        <a className="navbar-brand" href="#">
-                            <img src={logoPagina} alt="Logo" className='logoNavbar'/>
-                        </a>
-                    </div>
-
-                    <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <nav className="navbar navbar-expand-md navbar-light fondoColorAzulado">
+                    <a className="navbar-brand col-4 col-md-2" href="#">
+                        <img src={logoPagina} className='logoNavbar' alt="Logo" />
+                    </a>
+                    <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
-
-                    <div className="collapse navbar-collapse col-12 col-md-10" id="collapsibleNavbar">
-                        <div className='row'>
-                            <div className='col-10 text-center'>
-                                <h2 className='text-white'>Marca Personal FP</h2>
-                            </div>
-                            <div className="col-1">
-                                <a href="#">
-                                    <img src={banderaEspania} alt="Logo" className='banderas'/>
-                                </a>
-                                <a href="#">
-                                    <img src={banderaEspania} alt="Logo" className='banderas'/>
-                                </a>
-                            </div>
+                    <div className="collapse navbar-collapse justify-content-center" id="navbarNav">
+                        <div className='col-12 col-md-8 col-lg-10 text-center'>
+                            <h3 className="navbar-text colorNaranja tituloHeader">Marca Personal FP</h3>
                         </div>
+                    <form className="form-inline col-12 col-md-4 col-lg-2 justify-content-center">
+                        <button className="mr-2 cambioIdioma fondoColorAzulado" type="submit">
+                            <img src={banderaEspania} className='bandera' alt="Bandera" />
+                        </button>
+                        <button className='cambioIdioma fondoColorAzulado' type="submit">
+                            <img src={banderaIngles} className='bandera' alt="Bandera" />
+                        </button>
+                    </form>
                     </div>
+                    
                 </nav>
             </header>
         </div>
