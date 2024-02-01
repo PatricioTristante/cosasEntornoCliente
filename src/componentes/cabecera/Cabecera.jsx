@@ -5,15 +5,16 @@ import banderaEspania from '../../assets/banderas/flag-for-flag-spain-svgrepo-co
 import banderaIngles from '../../assets/banderas/united-kingdom-uk-svgrepo-com.svg'
 
 import './Cabecera.css';
+import { Link } from 'react-router-dom';
 
 function Cabecera() {
     return (
-        <div>
+        <div className='container-fluid'>
             <header>
                 <nav className="navbar navbar-expand-md navbar-light fondoColorAzulado">
-                    <a className="navbar-brand col-4 col-md-2" href="#">
+                    <Link className="navbar-brand col-4 col-md-2" to={'/'}>
                         <img src={logoPagina} className='logoNavbar' alt="Logo" />
-                    </a>
+                    </Link>
                     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
