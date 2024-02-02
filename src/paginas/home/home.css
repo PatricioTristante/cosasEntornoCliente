@@ -6,6 +6,15 @@
     margin-top: 6rem;
 }
 
+.paddingTop6{
+    padding-top: 6rem;
+}
+
 .home{
-    /*TODO Hacer que tenga la imagen y el fondo pedido en la practica*/
+    min-height: 80vh;
+    background-image: url(../../assets/logo/mp-logoNaranja10fondo.png);
+    background-repeat: repeat;
+    background-size: cover;
+    background-position: center;
+    background-size: 30px;
 }

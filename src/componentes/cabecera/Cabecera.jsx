@@ -7,11 +7,19 @@ import banderaIngles from '../../assets/banderas/united-kingdom-uk-svgrepo-com.s
 import './Cabecera.css';
 import { Link } from 'react-router-dom';
 
-function Cabecera() {
+function Cabecera(props) {
+
+    function manejarCambioIdioma(idioma) {
+        event.preventDefault();
+        props.cambiarIdioma(idioma);
+        console.log(idioma);
+    }
+
     return (
-        <div className='container-fluid'>
+        <div className='container-fluid fondoColorAzulado'>
+            
             <header>
-                <nav className="navbar navbar-expand-md navbar-light fondoColorAzulado">
+                <nav className="navbar navbar-expand-md ">
                     <Link className="navbar-brand col-4 col-md-2" to={'/'}>
                         <img src={logoPagina} className='logoNavbar' alt="Logo" />
                     </Link>
@@ -22,14 +30,14 @@ function Cabecera() {
                         <div className='col-12 col-md-8 col-lg-10 text-center'>
                             <h3 className="navbar-text colorNaranja tituloHeader">Marca Personal FP</h3>
                         </div>
-                    <form className="form-inline col-12 col-md-4 col-lg-2 justify-content-center">
-                        <button className="mr-2 cambioIdioma fondoColorAzulado" type="submit">
+                    <div className='"form-inline col-12 col-md-4 col-lg-2 justify-content-center"'>
+                        <button className="mr-2 cambioIdioma fondoColorAzulado" onClick={() => manejarCambioIdioma("es")}>
                             <img src={banderaEspania} className='bandera' alt="Bandera" />
                         </button>
-                        <button className='cambioIdioma fondoColorAzulado' type="submit">
-                            <img src={banderaIngles} className='bandera' alt="Bandera" />
+                        <button className='cambioIdioma fondoColorAzulado' onClick={() => manejarCambioIdioma("en")}>
+                            <img  src={banderaIngles} className='bandera' alt="Bandera" />
                         </button>
-                    </form>
+                    </div>
                     </div>
                     
                 </nav>

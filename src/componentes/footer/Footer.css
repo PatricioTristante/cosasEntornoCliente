@@ -1,0 +1,33 @@
+.cantidadFooter{
+    font-size: 2em;
+}
+
+.redesSociales{
+    width: 30px;
+}
+
+.marginTop9{
+    margin-top: 9rem;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: none;
+
+}
+
+.logoFooter{
+    width: 70%;
+}
+
+.negrita{
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.parrafoFooter{
+    font-size: 1.1em;
+}
