@@ -1,6 +1,42 @@
 .imagenCuerpo{
-    width: 80%;
+    width: 100%;
 }
+
+.efectoResaltar {
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.efectoResaltar img {
+    display: block;
+    transition: opacity 0.3s ease;
+}
+
+.efectoResaltar:hover::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 165, 0, 0.5);
+}
+
+.efectoResaltar .nombre {
+    position: absolute;
+    top:50%;
+    color: white;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.efectoResaltar:hover .nombre {
+    opacity: 1;
+    z-index: 1;
+}
+
 
 .marginTop6{
     margin-top: 6rem;

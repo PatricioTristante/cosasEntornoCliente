@@ -14,17 +14,26 @@ function Home(){
                 <div className='row'>
                     <div className='col-12 col-md-4 pb-4 pb-md-0 text-center'>
                         <Link to='/empresa'>
-                            <img className='imagenCuerpo' src={empresaImg} alt="" />
+                            <div  className='efectoResaltar'>
+                                <img className='imagenCuerpo' src={empresaImg} alt="" />
+                                <h5 class="nombre">Empresas</h5>
+                            </div>
                         </Link>
                     </div>
                     <div className='col-12 col-md-4 pb-4 pb-md-0 text-center'>
                         <Link to='/centroeducativo'>
-                            <img className='imagenCuerpo' src={centroEducativoImg} alt="" />
+                            <div  className='efectoResaltar'>
+                                <img className='imagenCuerpo' src={centroEducativoImg} alt="" />
+                                <h5 class="nombre">Centros educativos</h5>
+                            </div>
                         </Link>
                     </div>
                     <div className='col-12 col-md-4 pb-4 pb-md-0 text-center'>
                         <Link to='/alumno'>
-                            <img className='imagenCuerpo' src={alumnoImg} alt="" />
+                            <div className='efectoResaltar'>
+                                <img className='imagenCuerpo' src={alumnoImg} alt="" />
+                                <h5 class="nombre">Alumnos</h5>
+                            </div>
                         </Link>
                     </div>
                 </div>
