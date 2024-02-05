@@ -12,14 +12,13 @@ function Cabecera(props) {
     function manejarCambioIdioma(idioma) {
         event.preventDefault();
         props.cambiarIdioma(idioma);
-        console.log(idioma);
     }
 
     return (
         <div className='container-fluid fondoColorAzulado'>
             
             <header>
-                <nav className="navbar navbar-expand-md ">
+                <nav className="navbar navbar-expand-md navbar-light">
                     <Link className="navbar-brand col-4 col-md-2" to={'/'}>
                         <img src={logoPagina} className='logoNavbar' alt="Logo" />
                     </Link>
