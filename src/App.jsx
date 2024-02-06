@@ -22,9 +22,9 @@ function App() {
         <Cabecera cambiarIdioma={cambiarIdioma}></Cabecera>
         <Routes>
             <Route path='/' element={<Home />}></Route>
-            <Route path='/empresa' element={<Empresa />}></Route>
-            <Route path='/centroeducativo' element={<CentroEducativo />}></Route>
-            <Route path='/alumno' element={<Alumno />}></Route>
+            <Route path='/empresa/*' element={<Empresa />}></Route>
+            <Route path='/centroeducativo/*' element={<CentroEducativo />}></Route>
+            <Route path='/alumno/*' element={<Alumno />}></Route>
         </Routes>
         </IdiomaContext.Provider>
       </div>

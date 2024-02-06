@@ -4,12 +4,14 @@ const IDIOMAS = {
       "centrosEducativos": "Centros Educativos",
       "proyectos": "Proyectos",
       "alumnos": "Alumnos",
+      "busquedaProyectos": "Busqueda de Proyectos",
     },
     "en": {
       "empresas": "Companies",
       "centrosEducativos": "Educational Centers",
       "alumnos": "Students",
-      "proyectos": "Proyects"
+      "proyectos": "Proyects",
+      "busquedaProyectos": "Projects' Search",
     }
 }
 

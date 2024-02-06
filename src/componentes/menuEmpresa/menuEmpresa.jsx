@@ -3,6 +3,7 @@ import React, { useContext } from 'react';
 import IDIOMAS from '../../mock/idiomas-mock';
 import IdiomaContext from '../../contextos/IdiomaContext';
 import { Link } from 'react-router-dom';
+import './menuEmpresa.css';
 
 function MenuEmpresa() {
 
@@ -17,15 +18,15 @@ function MenuEmpresa() {
                 <span className="navbar-toggler-icon"></span>
             </button>
 
-            <div className="collapse navbar-collapse" id="collapsibleNavbar">
+            <div className="collapse navbar-collapse marginTop09" id="collapsibleNavbar">
                 <ul className="navbar-nav">
                     <li className="nav-item">
-                        <Link to={'/empresa/proyectos'} className='nav-link'>
+                        <Link to={'/empresa/proyectos'} className='nav-link enlaceMenuEmpresa'>
                             <p>{IDIOMAS[idioma].proyectos}</p>
                         </Link>
                     </li>
                     <li className="nav-item">
-                        <Link to={'/empresa/alumnos'} className='nav-link'>
+                        <Link to={'/empresa/alumnos'} className='nav-link enlaceMenuEmpresa'>
                             <p>{IDIOMAS[idioma].alumnos}</p>
                         </Link>
                     </li>
