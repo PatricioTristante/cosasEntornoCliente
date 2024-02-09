@@ -5,6 +5,7 @@ const IDIOMAS = {
       "proyectos": "Proyectos",
       "alumnos": "Alumnos",
       "busquedaProyectos": "Busqueda de Proyectos",
+      "busquedaAlumnos": "Busca a tus Alumnos",
     },
     "en": {
       "empresas": "Companies",
@@ -12,6 +13,7 @@ const IDIOMAS = {
       "alumnos": "Students",
       "proyectos": "Proyects",
       "busquedaProyectos": "Projects' Search",
+      "busquedaAlumnos": "Search your Students",
     }
 }
 

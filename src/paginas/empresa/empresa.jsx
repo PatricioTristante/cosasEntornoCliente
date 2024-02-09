@@ -2,6 +2,7 @@ import React from 'react';
 import MenuEmpresa from '../../componentes/menuEmpresa/menuEmpresa';
 import { Route, Routes } from 'react-router-dom';
 import EmpresaProyectos from '../empresaProyectos/empresaProyectos';
+import EmpresaAlumnos from '../empresaAlumnos/empresaAlumnos';
 
 function Empresa(){
 
@@ -10,7 +11,7 @@ function Empresa(){
             <MenuEmpresa/>
             <Routes>
                 <Route path='/proyectos/*' element={<EmpresaProyectos/>}/>
-                <Route path='/alumnos/*' element={<h1>Patata</h1>}/>
+                <Route path='/alumnos/*' element={<EmpresaAlumnos/>}/>
             </Routes>
         </div>
     );

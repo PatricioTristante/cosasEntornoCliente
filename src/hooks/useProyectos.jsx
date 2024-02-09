@@ -6,7 +6,11 @@ function useProyectos(){
 
     const [listaProyectos, setListaProyectos] = useState([]);
 
+    const [buscando, setBuscando] = useState(true);
+
     function obtenerDatos(){
+
+        setBuscando(false);
 
         getAllProyectos().then(posts => {
     
@@ -17,7 +21,7 @@ function useProyectos(){
 
     useEffect(obtenerDatos, []);
 
-    return {listaProyectos};
+    return {listaProyectos, buscando};
 };
 
 export default useProyectos;
