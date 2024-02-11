@@ -5,7 +5,7 @@ function useFamiliasProfesionales(){
 
     const [listaFamiliasProfesionales, setListaFamiliasProfesionales] = useState([]);
 
-    function obtenerDatos(){
+    function obtenerFamiliasProfesionales(){
 
         getAllFamiliasProfesionales().then(posts => {
     
@@ -14,7 +14,7 @@ function useFamiliasProfesionales(){
         });
     }
 
-    useEffect(obtenerDatos, []);
+    useEffect(obtenerFamiliasProfesionales, []);
 
     return {listaFamiliasProfesionales};
 };

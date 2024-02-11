@@ -1,5 +1,10 @@
 .tarjeta{
   border-radius: 5%;
+  background-color: rgb(230, 230, 230);
+}
+
+.datos{
+  background-color: white;
 }
 
 .negritaTarjeta{
@@ -7,5 +12,5 @@
 }
 
 .imagenTarjeta{
-  width: 150px;
+  width: 100%;
 }

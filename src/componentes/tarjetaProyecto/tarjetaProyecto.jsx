@@ -17,23 +17,26 @@ function TarjetaProyecto(props) {
                 </Tooltip>
             </div>
         );
-        //return <span key={ciclo.id}>{ciclo.codCiclo} </span>;
     }
 
     return (
-        <div className='col-12 col-md-4 col-lg-3 pb-3'>
+        <div className='col-12 col-lg-4 pb-3 col-xl-3'>
             <div className="card h-100 tarjeta">
-                <div className="card-body d-flex">
-                    <img src="https://source.unsplash.com/random/200x200/?proyecto" className="mr-3 imagenTarjeta" alt="Imagen de proyecto" />
-                    <div>
+                <div className="card-body row">
+                    <div className='col-5'>
+                        <img src="https://source.unsplash.com/random/200x200/?proyecto" className="imagenTarjeta" alt="Imagen de proyecto" />
+                    </div>
+                    <div className='datos col-6 ml-3'>
                         <h5 className="card-title">{props.proyecto.nombre}</h5>
-                        <ul className="list-unstyled">
-                            <li><span className='negritaTarjeta'>Alumnos</span></li>
-                            {props.proyecto.estudiantes.map(sacarAlumnos)}
-                            <li><span className='negritaTarjeta'>Tutor:</span> {props.proyecto.docente_id}</li>
-                            <li><span className='negritaTarjeta'>Ciclos:</span></li>
-                            {props.proyecto.ciclos.map(sacarCodCiclos)}
-                        </ul>
+                        <div>
+                            <ul className="list-unstyled">
+                                <li><span className='negritaTarjeta'>Alumnos</span></li>
+                                {props.proyecto.estudiantes.map(sacarAlumnos)}
+                                <li><span className='negritaTarjeta'>Tutor:</span> {props.proyecto.docente_id}</li>
+                                <li><span className='negritaTarjeta'>Ciclos:</span></li>
+                                {props.proyecto.ciclos.map(sacarCodCiclos)}
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -6,6 +6,9 @@ const IDIOMAS = {
       "alumnos": "Alumnos",
       "busquedaProyectos": "Busqueda de Proyectos",
       "busquedaAlumnos": "Busca a tus Alumnos",
+      "resultados": "Resultados",
+      "filtrarPorFamilia": "Filtrar por Familia Profesional",
+      "filtrarPerfilCompetencial": "Filtrar por Perfil Competencial",
     },
     "en": {
       "empresas": "Companies",
@@ -14,6 +17,9 @@ const IDIOMAS = {
       "proyectos": "Proyects",
       "busquedaProyectos": "Projects' Search",
       "busquedaAlumnos": "Search your Students",
+      "resultados": "Results",
+      "filtrarPorFamilia": "Filter by Professional Family",
+      "filtrarPerfilCompetencial": "Filter by Competence Profile",
     }
 }
 

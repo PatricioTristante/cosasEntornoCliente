@@ -1,19 +1,20 @@
 import React, { useContext } from 'react';
 import Checkboxfiltro from '../checkboxFiltro/checkboxFiltro';
 import useFamiliasProfesionales from '../../hooks/useFamiliasProfesionales';
-import filtroProyectosContext from '../../contextos/filtroProyectosContext';
+import IDIOMAS from '../../mock/idiomas-mock';
+import IdiomaContext from '../../contextos/IdiomaContext';
 
 function ListaFamiliasProfesional(props) {
 
-    const filtrosActuales = useContext(filtroProyectosContext);
+    const idioma = useContext(IdiomaContext);
 
-    let nuevaListaFiltros = filtrosActuales;
+    let nuevaListaFiltros = props.filtrosActuales;
 
     const {listaFamiliasProfesionales} = useFamiliasProfesionales();
 
     function cambiarFiltros(filtro, estado) {
         if (estado) {
-            nuevaListaFiltros = [...filtrosActuales, filtro];
+            nuevaListaFiltros = [...props.filtrosActuales, filtro];
         } else {
             nuevaListaFiltros = nuevaListaFiltros.filter(f => f !== filtro);
         }
@@ -21,12 +22,13 @@ function ListaFamiliasProfesional(props) {
     }
 
     function devolverCheckboxFiltro(filtro) {
-        return <Checkboxfiltro key={ filtro.id } id={ "FP" + filtro.id }
+        return <Checkboxfiltro key={ "FP" + filtro.id } id={ "FP" + filtro.id }
         nombre={ filtro.nombre } codigo={filtro.codigo} cambiarFiltros={cambiarFiltros}/>;
     }
 
     return (
         <div>
+            <h5>{IDIOMAS[idioma].filtrarPorFamilia}</h5>
             {listaFamiliasProfesionales.map(devolverCheckboxFiltro)}
         </div>
     );

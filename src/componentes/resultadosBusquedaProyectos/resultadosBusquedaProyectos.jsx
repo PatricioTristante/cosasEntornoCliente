@@ -25,8 +25,6 @@ function ResultadosBusquedaProyectos(props) {
         return salida;
     }
 
-    console.log(listaProyectos)
-
     return (
         <div className='row d-flex'>
             {buscando ? <AjaxLoader/> : renderizar()}

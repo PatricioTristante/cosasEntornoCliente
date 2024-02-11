@@ -1,6 +1,6 @@
-export function getAllIdiomas () {
+export function getAllALumnos () {
 
-    const url = 'https://run.mocky.io/v3/3ee642e8-870e-453b-82b7-e945523f74d2';
+    const url = 'https://run.mocky.io/v3/3d8e46e0-bac4-4aed-8fa2-69db9e53373d';
     
     return fetch(url)
       .then(response => {

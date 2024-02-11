@@ -3,7 +3,6 @@ import ListaFamiliasProfesional from '../../componentes/listaFamliaProfesional/l
 import IdiomaContext from '../../contextos/IdiomaContext';
 import IDIOMAS from '../../mock/idiomas-mock';
 import ResultadosBusquedaProyectos from '../../componentes/resultadosBusquedaProyectos/resultadosBusquedaProyectos';
-import filtroProyectosContext from '../../contextos/filtroProyectosContext';
 
 function EmpresaProyectos() {
 
@@ -13,19 +12,16 @@ function EmpresaProyectos() {
 
     function actualizarListaFiltros(filtros) {
         setFiltrosAplicados(filtros)
-        console.log(filtros);
     }
 
 
     return (
-        <filtroProyectosContext.Provider value={filtrosAplicados}>
-            <div>
-                <h3>{IDIOMAS[idioma].busquedaProyectos}</h3>
-                <ListaFamiliasProfesional actualizarListaFiltros={actualizarListaFiltros}/>
-                <h5>Resultados</h5>
-                <ResultadosBusquedaProyectos filtros={filtrosAplicados}/>
-            </div>
-        </filtroProyectosContext.Provider>
+        <div>
+            <h3>{IDIOMAS[idioma].busquedaProyectos}</h3>
+            <ListaFamiliasProfesional actualizarListaFiltros={actualizarListaFiltros} filtrosActuales={filtrosAplicados}/>
+            <h5>{IDIOMAS[idioma].resultados}</h5>
+            <ResultadosBusquedaProyectos filtros={filtrosAplicados}/>
+        </div>
     );
 }
 
